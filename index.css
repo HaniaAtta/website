@@ -87,7 +87,7 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  height: 50dvh;
+  height: 40dvh;
 }
 
 .scroller {
@@ -115,61 +115,10 @@
 
   color: #04e4b4;
   font-family: Bebas Neue;
+font-size: clamp(0.8rem, 2vw, 1.2rem); 
 }
 
-@media screen and (max-width: 399px) {
-  .scroller__list {
-    font-size: 16px;
-  }
-}
 
-@media screen and (min-width: 400px) and (max-width: 599px) {
-  .scroller__list {
-    font-size: 24px;
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width: 799px) {
-  .scroller__list {
-    font-size: 36px;
-  }
-}
-
-@media screen and (min-width: 800px) and (max-width: 999px) {
-  .scroller__list {
-    font-size: 48px;
-  }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1199px) {
-  .scroller__list {
-    font-size: 60px;
-  }
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1499px) {
-  .scroller__list {
-    font-size: 80px;
-  }
-}
-
-@media screen and (min-width: 1500px) and (max-width: 1799px) {
-  .scroller__list {
-    font-size: 90px;
-  }
-}
-
-@media screen and (min-width: 1800px) and (max-width: 1999px) {
-  .scroller__list {
-    font-size: 100px;
-  }
-}
-
-@media screen and (min-width: 2000px) {
-  .scroller__list {
-    font-size: 120px;
-  }
-}
 .scroller[data-direction="reverse"] .scroller__list {
   --animation-direction: reverse;
 }
@@ -196,13 +145,14 @@
 
 .scroller__list li {
   padding-block: 0.75rem;
+  margin: auto;
   padding-inline: var(--size-6);
   border-radius: var(--radius-2);
 }
 
 @keyframes scroll {
   to {
-    transform: translate(calc(-50% + 0.75rem));
+    transform: translate(calc(-60% + 0.75rem));
   }
 }
 
@@ -222,44 +172,20 @@
 
 @media (max-width: 900px) {
   .scroller {
-    max-width: 80%;
+    max-width: 99%;
     margin: 2rem auto;
   }
-  .scroller__list {
-    font-size: 80px;
-    gap: 1rem;
-  }
+  
 }
 
-@media (max-width: 768px) {
-  .scroller__list {
-    font-size: 50px;
-    gap: 0.5rem;
-  }
-}
 
-@media (max-width: 480px) {
-  .scroller__list {
-    font-size: 30px;
-    gap: 0.25rem;
-  }
-}
-
-@media (max-width: 320px) {
-  .scroller__list {
-    font-size: 20px;
-    gap: 0.1rem;
-  }
-}
 /*About us */
-.textbox h3{
+.textbox h3 {
   font-family: 'LEMON MILK', sans-serif;
-    font-weight: bold;
+  font-weight: bold;
   text-align: center;
-  font-size: 38px;
+  font-size: clamp(24px, 5vw, 38px);
   color: #addccf;
-  
-  
 }
 
 
@@ -275,16 +201,13 @@
     }
 
 
-    .textbox{
-      position: relative;
-      margin: auto;
-     }
+
     .box_text {
       max-width: 70%;
       margin: 5rem auto;
-      padding: 3rem;
+      padding: 1.6rem;
       color: #d7f0e9;
-      text-align: justify;
+word-spacing: 0.3em;
       background-image: repeating-linear-gradient(-4deg, #038365, #038365 18px, transparent 18px, transparent 30px, #038365 30px), repeating-linear-gradient(86deg, #038365, #038365 18px, transparent 18px, transparent 30px, #038365 30px), repeating-linear-gradient(176deg, #038365, #038365 18px, transparent 18px, transparent 30px, #038365 30px), repeating-linear-gradient(266deg, #038365, #038365 18px, transparent 18px, transparent 30px, #038365 30px);
       background-size: 2px 100%, 100% 2px, 2px 100% , 100% 2px;
       background-position: 0 0, 0 0, 100% 0, 0 100%;
@@ -295,44 +218,10 @@
       font-style: normal;
       margin-left: 15%; 
       margin-right: 15%; 
-      font-size: 1.3rem;
-    }
+      font-size: clamp(1rem, 1.5vw, 1.3rem);    }
     
     .lorem{
       color: #3bbb97;
     }
     
-    @media (max-width: 1199px) {
-      .box_text {
-        max-width: 80%;
-        padding: 2rem;
-        margin-left: 10%;
-        margin-right: 10%; 
-      }
-    }
     
-    @media (max-width: 991px) {
-      .box_text {
-        max-width: 80%;
-        padding: 1.5rem;
-        margin-left: 8.5%; 
-        margin-right: 8.5%; 
-      }
-    }
-    
-    @media (max-width: 767px) {
-      .box_text {
-        max-width: 90%;
-        padding: 1rem;
-        margin-left: 6%; 
-        margin-right: 6%; 
-      }
-    }
-    
-    @media (max-width: 479px) {
-      .box_text {
-        padding: 0.5rem;
-        margin-left: 5.5%; 
-        margin-right: 5.5%; 
-      }
-    }
