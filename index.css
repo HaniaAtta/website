@@ -76,7 +76,7 @@
   
   
 /* Scroller Animation*/
-  @import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props";
 
 @import "https://unpkg.com/open-props/normalize.min.css";
 
@@ -105,6 +105,7 @@
 
 .scroller__list {
   width: 100%;
+  min-width: 2250px; 
   display: flex;
   list-style: none;
   margin: 0;
@@ -112,10 +113,9 @@
   padding-block: var(--size-3);
   animation: scroll var(--animation-duration, 5s)
     var(--animation-direction, reverse) infinite linear;
-
   color: #04e4b4;
   font-family: Bebas Neue;
-font-size: clamp(0.8rem, 2vw, 1.2rem); 
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
 }
 
 
@@ -152,7 +152,7 @@ font-size: clamp(0.8rem, 2vw, 1.2rem);
 
 @keyframes scroll {
   to {
-    transform: translate(calc(-60% + 0.75rem));
+    transform: translate(calc(-61% + 0.75rem));
   }
 }
 
@@ -177,7 +177,6 @@ font-size: clamp(0.8rem, 2vw, 1.2rem);
   }
   
 }
-
 
 /*About us */
 .textbox h3 {
