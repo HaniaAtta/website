@@ -1,0 +1,338 @@
+@import url(https://db.onlinewebfonts.com/c/0a6ee448d1bd65c56f6cf256a7c6f20a?family=Bahnschrift);
+  body{
+    background-color: #000000;
+  }
+  /*Main Animation*/
+  #tsparticles {
+    width: 100%;
+    height: 100vh;
+        background-color: #000000;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  
+  }
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .logo {
+    display: inline-block;
+    max-width: 60%; 
+    height: auto;
+    margin: 0 auto;
+  }
+  #tsparticles h3 {
+
+    font-family: "Bahnschrift";
+    font-size: 19rem;
+    word-spacing: 8px;
+    color: #addccf; 
+    margin-top: -2%;
+    text-align: center;
+  }
+  
+@media (max-width: 768px) {
+  .logo {
+    max-width: 70%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 100%; 
+  }
+}
+
+  @media (min-width: 1200px) {
+    #tsparticles h3 {
+      font-size: 2.3rem;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1199px) {
+    #tsparticles h3 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    #tsparticles h3 {
+      font-size: 1.2rem; 
+    }
+  }
+  @media (max-width: 516px) {
+    #tsparticles h3 {
+      font-size: 1rem;
+    }
+  }
+
+  
+
+  
+  
+/* Scroller Animation*/
+  @import "https://unpkg.com/open-props";
+
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+.wrapper {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  height: 50dvh;
+}
+
+.scroller {
+  max-width: 100%;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  margin-top: 2rem;
+}
+
+.scroller__list {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  gap: 1.5rem;
+  padding-block: var(--size-3);
+  animation: scroll var(--animation-duration, 5s)
+    var(--animation-direction, reverse) infinite linear;
+
+  color: #04e4b4;
+  font-family: Bebas Neue;
+}
+
+@media screen and (max-width: 399px) {
+  .scroller__list {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 599px) {
+  .scroller__list {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 799px) {
+  .scroller__list {
+    font-size: 36px;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 999px) {
+  .scroller__list {
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+  .scroller__list {
+    font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1499px) {
+  .scroller__list {
+    font-size: 80px;
+  }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1799px) {
+  .scroller__list {
+    font-size: 90px;
+  }
+}
+
+@media screen and (min-width: 1800px) and (max-width: 1999px) {
+  .scroller__list {
+    font-size: 100px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .scroller__list {
+    font-size: 120px;
+  }
+}
+.scroller[data-direction="reverse"] .scroller__list {
+  --animation-direction: reverse;
+}
+
+.scroller[data-speed="slow"] .scroller__list {
+  --animation-duration: 40s;
+}
+
+.scroller[data-speed="normal"] .scroller__list {
+  --animation-duration: 20s;
+}
+
+.scroller[data-speed="fast"] .scroller__list {
+  --animation-duration: 15s;
+}
+
+.scroller[data-speed="very fast"] .scroller__list {
+  --animation-duration: 10s;
+}
+
+.scroller[data-speed="insane"] .scroller__list {
+  --animation-duration: 4s;
+}
+
+.scroller__list li {
+  padding-block: 0.75rem;
+  padding-inline: var(--size-6);
+  border-radius: var(--radius-2);
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% + 0.75rem));
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .scroller__list {
+    animation: scroll var(--animation-duration, 5s)
+      var(--animation-direction, reverse) infinite linear;
+    transform: translateX(0);
+  }
+  @keyframes scroll {
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .scroller {
+    max-width: 80%;
+    margin: 2rem auto;
+  }
+  .scroller__list {
+    font-size: 80px;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroller__list {
+    font-size: 50px;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroller__list {
+    font-size: 30px;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .scroller__list {
+    font-size: 20px;
+    gap: 0.1rem;
+  }
+}
+/*About us */
+.textbox h3{
+  font-family: 'LEMON MILK', sans-serif;
+    font-weight: bold;
+  text-align: center;
+  font-size: 38px;
+  color: #addccf;
+  
+  
+}
+
+
+   
+ 
+
+    .hollow {
+
+      padding: 5px 10px; 
+      -webkit-text-stroke: 2px #04e3b3; 
+      -webkit-text-stroke-width: 2px;
+      color: transparent; 
+    }
+
+
+    .textbox{
+      position: relative;
+      margin: auto;
+     }
+    .box_text {
+      max-width: 70%;
+      margin: 5rem auto;
+      padding: 3rem;
+      color: #d7f0e9;
+      text-align: justify;
+      background-image: repeating-linear-gradient(-4deg, #038365, #038365 18px, transparent 18px, transparent 30px, #038365 30px), repeating-linear-gradient(86deg, #038365, #038365 18px, transparent 18px, transparent 30px, #038365 30px), repeating-linear-gradient(176deg, #038365, #038365 18px, transparent 18px, transparent 30px, #038365 30px), repeating-linear-gradient(266deg, #038365, #038365 18px, transparent 18px, transparent 30px, #038365 30px);
+      background-size: 2px 100%, 100% 2px, 2px 100% , 100% 2px;
+      background-position: 0 0, 0 0, 100% 0, 0 100%;
+      background-repeat: no-repeat;
+    
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      margin-left: 15%; 
+      margin-right: 15%; 
+      font-size: 1.3rem;
+    }
+    
+    .lorem{
+      color: #3bbb97;
+    }
+    
+    @media (max-width: 1199px) {
+      .box_text {
+        max-width: 80%;
+        padding: 2rem;
+        margin-left: 10%;
+        margin-right: 10%; 
+      }
+    }
+    
+    @media (max-width: 991px) {
+      .box_text {
+        max-width: 80%;
+        padding: 1.5rem;
+        margin-left: 8.5%; 
+        margin-right: 8.5%; 
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .box_text {
+        max-width: 90%;
+        padding: 1rem;
+        margin-left: 6%; 
+        margin-right: 6%; 
+      }
+    }
+    
+    @media (max-width: 479px) {
+      .box_text {
+        padding: 0.5rem;
+        margin-left: 5.5%; 
+        margin-right: 5.5%; 
+      }
+    }
